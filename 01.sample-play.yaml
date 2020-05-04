@@ -1,0 +1,6 @@
+-name : play1
+host : all
+task:
+  -name : ping check for play1
+  ping :
+
