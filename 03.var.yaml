@@ -1,0 +1,8 @@
+- name: print variables
+  hoats:  all
+  vars:
+    URL: www.google.com
+  tasks:
+    - name: variable checking
+      debug:
+        msg: output = {{URL}}
