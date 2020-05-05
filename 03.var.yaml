@@ -1,5 +1,5 @@
 - name: print variables
-  hoats:  all
+  hosts:  all
   vars:
     URL: www.google.com
   tasks:
