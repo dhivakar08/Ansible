@@ -16,3 +16,16 @@
         msg: output = {{URL}}
       vars:
         URL: www.task.com
+
+## Observation, Variables can be given at task level , Only that task can access that variable.
+
+- name: variables on both level
+  hosts: all
+  vars:
+    URL: www.google.com
+    tasks:
+      - name: variable on task level
+        debug:
+          msg: URL = {{URL}}
+          vars:
+            URL: task.google.com
