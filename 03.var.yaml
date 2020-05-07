@@ -29,3 +29,17 @@
           msg: URL = {{URL}}
         vars:
           URL: tasks.google.com
+
+## Observation: Variables of tasks will always override the variables of play
+
+- name: Take the input from the user
+  hosts:  all
+  vars_prompt:
+    - name: username
+        prompt: "What is your username?"
+        private: no
+       tasks:
+         -  name: Print URL
+            debug:
+              msg:  URL = {{username}}
+
