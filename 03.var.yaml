@@ -54,4 +54,24 @@
       debug:
         msg: URL = {{URL}}
 
+## Observation : Variable Precedence Order , vars_files, vars_prompt, vars
+- name: overlap vars with vars_prompt
+  hosts: all
+  vars_prompt:
+    - name: URL
+      prompt: Enter URL
+      private: no
+  vars:
+    URL: vars.google.com
+  vars_files:
+    - var01.yaml
+  tasks:
+    - name: Print variable
+      debug:
+        msg: URL = {{URL}}
+    - name: Print URL
+      debug:
+        msg: URL = {{URL}}
+      vars:
+        URL: tasks.google.com
 
