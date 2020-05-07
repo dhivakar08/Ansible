@@ -36,10 +36,10 @@
   hosts:  all
   vars_prompt:
     - name: username
-        prompt: "What is your username?"
-        private: no
-       tasks:
-         -  name: Print URL
-            debug:
-              msg:  URL = {{username}}
+      prompt: "What is your username?"
+      private: no
+    tasks:
+      -  name: Print URL
+         debug:
+            msg:  URL = {{username}}
 
