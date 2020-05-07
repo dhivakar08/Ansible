@@ -32,14 +32,17 @@
 
 ## Observation: Variables of tasks will always override the variables of play
 
-- name: Take the input from the user
-  hosts:  all
+- name: Take input from user
+  hosts: all
   vars_prompt:
-    - name: username
-      prompt: "What is your username?"
+    - name: URL
+      prompt: Enter URL
       private: no
-    tasks:
-    -  name: Print URL
-        debug:
-           msg:  URL = {{username}}
+  tasks:
+    - name: Print URL
+      debug:
+        msg: URL = {{URL}}
+
+
+
 
