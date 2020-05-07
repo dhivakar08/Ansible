@@ -23,8 +23,8 @@
   hosts: all
   vars:
     URL: www.google.com
-    tasks:
-      - name: variable on task level
+   tasks:
+      - name: variable on Task level
         debug:
           msg: URL = {{URL}}
           vars:
