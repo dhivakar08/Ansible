@@ -6,3 +6,13 @@
     - name: variable checking
       debug:
         msg: output = {{URL}}
+
+## Observation: Vars can be given on play level, Meaning all tasks can access that Variable.
+- name: Demo on Task Variables
+  hosts:  all
+  tasks:
+    - name: task variable
+      debug:
+        msg: output = {{URL}}
+      vars:
+        URL: www.task.com
