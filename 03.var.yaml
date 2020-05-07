@@ -43,6 +43,15 @@
       debug:
         msg: URL = {{URL}}
 
+##Take the input from the file level variable
 
+- name: Variables from files
+  hosts: all
+  vars_files:
+    - var01.yaml
+  tasks:
+    - name: Print variable
+      debug:
+        msg: URL = {{URL}}
 
 

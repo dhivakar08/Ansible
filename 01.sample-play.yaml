@@ -1,6 +1,6 @@
--name : play1
-host : all
-task:
-  -name : ping check for play1
-  ping :
+- name: play1
+  hosts: all
+  tasks:
+  - name: ping check for play1
+    ping:
 
