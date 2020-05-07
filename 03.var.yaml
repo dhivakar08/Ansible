@@ -22,10 +22,10 @@
 - name: variables on both level
   hosts: all
   vars:
-    URL: www.google.com
+    URL: vars.google.com
   tasks:
-      - name: variable on Task level
+      - name: Print varsiable
         debug:
           msg: URL = {{URL}}
-          vars:
-            URL: test.google.com
+        vars:
+          URL: tasks.google.com
