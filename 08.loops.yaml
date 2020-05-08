@@ -3,7 +3,7 @@
   tasks:
     - name: loop testing
       debug:
-        msg: Fruits = {{Iem}}
+        msg: Fruits = {{item}}
       loop:
         - apple
         - orange
