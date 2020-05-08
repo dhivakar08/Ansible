@@ -13,3 +13,9 @@
       when: A is defined or B is defined
       debug:
         msg: Print A or B is defined
+    - name: Print either A and B is defined
+      when: A is defined and B is defined
+      debug:
+        msg: Print A and B is defined
+
+
