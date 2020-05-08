@@ -1,0 +1,11 @@
+- name: register-variable
+  hosts:  all
+  tasks:
+
+    - name: Exceute command
+      shell:  uptime
+      register: OUT
+
+    - name: previous command output
+      debug:
+        msg: Output = "{{OUT}}"
