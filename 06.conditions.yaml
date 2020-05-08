@@ -1,0 +1,15 @@
+- name: condition in ansible
+  hosts:  all
+  tasks:
+    - name: Print A
+      when: A is defined
+      debug:
+        msg:  A = {{A}}
+    - name: Print B
+        when: B is defined
+        debug:
+          msg:  B = {{B}}
+    - name: Print either A or B is defined
+        when: A is defined or B is defined
+        debug:
+          msg: Print A or B is defined
