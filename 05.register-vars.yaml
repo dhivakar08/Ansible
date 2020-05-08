@@ -8,4 +8,4 @@
 
     - name: previous command output
       debug:
-        msg: Output = "{{OUT.msg.stdout}}"
+        msg: Output = "{{OUT.msg.stdout_lines}}"
