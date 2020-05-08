@@ -7,6 +7,6 @@
         msg:  Hostname = {{ansible_hostname}}
 
     - name: Print memory
-       debug:
-         msg:  Memory of the node = {{ansible_memory_mb.real.free}}
+      debug:
+        msg:  Memory of the node = {{ansible_memory_mb.real.free}}
 
