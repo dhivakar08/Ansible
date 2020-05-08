@@ -1,0 +1,10 @@
+- name: loop in ansible
+  hosts:  all
+  tasks:
+    - name: loop testing
+      debug:
+        msg: Fruits = {{Iem}}
+      loop:
+        - apple
+        - orange
+        - graps
